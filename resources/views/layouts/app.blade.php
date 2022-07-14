@@ -36,5 +36,10 @@
                     'success'
                 )
             })
+
+            setInterval(() => {
+                Livewire.emit('render')
+            }, 60000);
+        </script>
     </body>
 </html>

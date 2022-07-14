@@ -8,9 +8,9 @@
         <div class="flex">
 
             <div class="mr-2 mt-4 w-1/5">
-                <x-input type="number" placeholder="ID" wire:model.defer="id_ticket"></x-input>
+                <x-input type="number" placeholder="ID" wire:model.defer="ticket_number"></x-input>
 
-                <x-input-error for="id_ticket" />
+                <x-input-error for="ticket_number" />
             </div>
             <div class="ml-2 mt-4 w-3/5">
 

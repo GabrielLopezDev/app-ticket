@@ -7,11 +7,11 @@ use Livewire\Component;
 
 class CreateTicket extends Component
 {
-    public $id_ticket;
+    public $ticket_number;
     public $name;
 
     protected $rules = [
-        'id_ticket' => 'required|unique:tickets,id|min:0',
+        'ticket_number' => 'required|unique:tickets,id|min:0',
         'name' => 'required|min:3|max:255',
     ];
 
@@ -31,13 +31,13 @@ class CreateTicket extends Component
         $queue = $queue_1 * 2 > $queue_2 * 3 ? 2 : 1;
 
         Ticket::create([
-            'id' => $this->id_ticket,
+            'ticket_number' => $this->ticket_number,
             'name' => $this->name,
             'queue' => $queue,
         ]);
 
         $this->reset([
-            'id_ticket',
+            'ticket_number',
             'name',
         ]);
 

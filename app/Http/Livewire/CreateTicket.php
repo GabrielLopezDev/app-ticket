@@ -24,11 +24,11 @@ class CreateTicket extends Component
     {
         $this->validate();
 
-        $queue_1 = Ticket::where('queue', '1')->get();
-        $queue_2 = Ticket::where('queue', '2')->get();
+        $queue_1 = Ticket::where('queue', '1')->count();
+        $queue_2 = Ticket::where('queue', '2')->count();
 
         // Calcular a que cola se asignará el ticket
-        $queue = count($queue_1) * 2 > count($queue_2) * 3 ? 2 : 1;
+        $queue = $queue_1 * 2 > $queue_2 * 3 ? 2 : 1;
 
         Ticket::create([
             'id' => $this->id_ticket,

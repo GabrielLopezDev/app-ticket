@@ -14,6 +14,8 @@
 
         @livewireStyles
 
+        <!-- Scripts -->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </head>
 
     <body class="font-sans antialiased bg-gray-100">
@@ -26,5 +28,13 @@
 
         @livewireScripts
 
+        <script>
+            Livewire.on('alert-create-ticket', function (message) {
+                Swal.fire(
+                    '¡Buen trabajo!',
+                    message,
+                    'success'
+                )
+            })
     </body>
 </html>

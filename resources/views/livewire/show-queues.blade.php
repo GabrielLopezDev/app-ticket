@@ -9,8 +9,8 @@
             <div class="grid grid-cols-8">
                 @foreach ($queue_1 as $item)
                     <x-card>
-                        <x-slot name='id_ticket'>
-                            {{$item->id}}
+                        <x-slot name='ticket_number'>
+                            {{$item->ticket_number}}
                         </x-slot>
 
                         <x-slot name='name'>
@@ -33,8 +33,8 @@
             <div class="grid grid-cols-8">
                 @foreach ($queue_2 as $item)
                     <x-card>
-                        <x-slot name='id_ticket'>
-                            {{$item->id}}
+                        <x-slot name='ticket_number'>
+                            {{$item->ticket_number}}
                         </x-slot>
 
                         <x-slot name='name'>

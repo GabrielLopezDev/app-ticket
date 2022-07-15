@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('ticket_number')->nullable(false);
+            $table->unsignedBigInteger('ticket_number')->unique()->nullable(false);
             $table->string('name')->nullable(false);
             $table->tinyInteger('queue')->nullable(false)->comment('Establece a cual cola pertenece el ticket (1, 2)');
             $table->timestamps();

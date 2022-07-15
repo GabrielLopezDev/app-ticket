@@ -11,7 +11,7 @@ class CreateTicket extends Component
     public $name;
 
     protected $rules = [
-        'ticket_number' => 'required|unique:tickets,id|min:0',
+        'ticket_number' => 'required|unique:tickets,ticket_number|min:0',
         'name' => 'required|min:3|max:255',
     ];
 
